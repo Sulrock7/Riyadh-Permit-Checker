@@ -66,7 +66,7 @@ if api_key:
                 with st.spinner('جاري تحليل المخطط ومطابقته مع الاشتراطات... قد يستغرق الـ PDF وقتاً أطول قليلاً'):
                     try:
                         # استدعاء Gemini 1.5 Pro
-                        model = genai.GenerativeModel('gemini-1.5-pro-latest', system_instruction=system_instruction)
+                        model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=system_instruction)
                         response = model.generate_content(["قم بتدقيق هذا المخطط وإعطائي تقرير مفصل بالملاحظات والمخالفات إن وجدت.", model_input])
                         
                         # عرض النتيجة
